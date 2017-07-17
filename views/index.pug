@@ -1,0 +1,13 @@
+html
+  head
+    link(rel="stylesheet", href="style.css", type='text/css')
+  body
+    header
+      h1 Url Shortener Microservice
+    ul
+      each item in items
+        li 
+          p Original: #{item.original_url}, New: #{item.short_url}
+    form(action="/new", method="POST")
+      input(name="original", placeholder="https://www.google.com")
+      button(type="submit") Submit
